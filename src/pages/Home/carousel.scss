@@ -1,0 +1,116 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto; // Added margin to create space above the component
+
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial {
+    text-align: center;
+    padding: 2rem 1rem; // Add padding around the testimonial to center it properly
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Ensure the image is centered
+
+    .testimonial-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #555;
+      padding: 0 1rem; // Padding to prevent text from touching edges
+    }
+
+    .testimonial-footer {
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #333;
+
+      .testimonial-name {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      .testimonial-title {
+        font-size: 0.75rem;
+        color: #999;
+      }
+    }
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Added margins to move buttons away from the sides
+    &.prev {
+      left: 1.5rem; // Increased distance from the left side
+    }
+
+    &.next {
+      right: 1.5rem; // Increased distance from the right side
+    }
+
+    &:hover {
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.7
+      ); // Slight darkening on hover for a better UX
+    }
+  }
+
+  // Dots for carousel indicators
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px; // Space between dots
+    margin-top: 1rem; // Space above dots
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: lightgray; // Default color for inactive dots
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #01abef; // Color for active dot
+      }
+    }
+  }
+}

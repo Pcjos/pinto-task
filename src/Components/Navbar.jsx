@@ -38,7 +38,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-auto md:px-16 py-5 bg-[#01abef] flex items-center z-50 top-0 left-0 absolute ">
+    <div className="w-full h-auto md:px-16 py-5 bg-[#01abef] flex items-center z-50 top-0 left-0 fixed ">
       {/* Left side - School Name & Navigation Links */}
       <div className="hidden md:flex items-center space-x-8">
         <SchoolName />
